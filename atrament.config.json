@@ -1,13 +1,13 @@
 {
-  "name": "Atrament Preact UI demo",
-  "short_name": "atrament-preact-ui",
-  "description": "Atrament Preact UI - shell for Ink games",
+  "name": "Band Manager",
+  "short_name": "Band_Manager",
+  "description": "Band Management Simulator - built with Atrament Preact UI",
   "theme": "light",
   "font": "System",
   "language": "en",
   "game": {
     "path": "game",
-    "source": "intercept.ink",
-    "script": "intercept.ink.json"
+    "source": "BM_Start.ink",
+    "script": "BM_Start.ink.json"
   }
 }
