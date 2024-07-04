@@ -7,7 +7,7 @@ import { registerGetAssetPath } from 'src/utils/get-asset-path';
 
 import { loadDefaultFont, loadDefaultTheme } from 'src/atrament/load-defaults';
 import { registerSettingsHandlers } from 'src/atrament/settings-handlers'
-import registerSceneProcessors from 'src/atrament/scene-processors';
+import { sceneListImages } from 'src/atrament/scene-processors';
 
 import onGameStart from 'src/atrament/on-game-start';
 
@@ -17,13 +17,12 @@ export default async function atramentInit(atrament, Story) {
     `%c Atrament > ${event} `, 'color: #111111; background-color: #7FDBFF;',
     message
   ));
-  // handle settings
+  // handle theme settings
   registerSettingsHandlers(atrament);
   // initialize Atrament
   await atrament.init(Story, {
     applicationID,
     settings: {
-      fullscreen: false,
       animation: true,
       mute: false,
       volume: 50,
@@ -40,7 +39,7 @@ export default async function atramentInit(atrament, Story) {
   loadDefaultTheme(atrament);
   loadDefaultFont(atrament);
   // register scene processors
-  registerSceneProcessors(atrament);
+  sceneListImages(atrament);
   // mute when tab is inactive
   muteWhenInactive(atrament);
   // handle #BACKGROUND tag

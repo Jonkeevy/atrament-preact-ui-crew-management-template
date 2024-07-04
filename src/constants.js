@@ -18,9 +18,6 @@ export const applicationID = [
 
 //// Settings ////
 
-// language
-export const appLanguage = cfg.language || 'en';
-
 // theme
 export const gameDefaultTheme = cfg.theme;
 
@@ -33,3 +30,4 @@ export const stepFontSize = 10;
 export const minFontSize = defaultFontSize - ( stepFontSize * 3);
 export const maxFontSize = defaultFontSize + ( stepFontSize * 5);
 
+export const sampleFontsizeText = 'The quick brown fox jumps over the lazy dog. Jackdaws love my big sphinx of quartz.';
