@@ -11,6 +11,7 @@
 
 === function instrument(x)
     ~ temp instrumentTEMP = x ^ LIST_ALL(instruments)
+        // lists don't support spaces so needs to swap out.
     {instrumentTEMP:
         - lead_guitar:
             ~ return "lead guitar"
@@ -21,6 +22,7 @@
     }
 
 === function condition(x)
+    //condition of the instruments/equipment
     ~ return x ^ LIST_ALL(conditions)
 
 === function generateNPC(ref x)
@@ -64,7 +66,7 @@
     {x == ():
     ~ return 
     -else:
-    <mark>{name(x)}</mark> plays a <mark>{condition(x)} {instrument(x)}</mark>. They're a <mark>{skill(x)}</mark> but seem <mark>{vice(x)}</mark>.
+    <mark>{name(x)}</mark> plays a <mark>{condition(x)} {instrument(x)}</mark>. They're a <mark>{skill(x)}</mark> but also <mark>{vice(x)}</mark>.
     }
 
 === function swapBandMember(ref xOUT, ref yIN)

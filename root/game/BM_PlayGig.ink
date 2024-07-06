@@ -41,3 +41,22 @@ There's a venue called {venues(PlaytheGig)} you can play. You'll get a round of 
     ~ improve(band_spirits)
     ~ promo_boost = 0
 --> Sleep
+
+=== GigMiniGame
+-(SetTheScene)
+
+-(SoundCheck)
+
+-(OpeningNumber)
+
+-(RockOut)
+
+-(Solo)
+
+-(BigFinish)
+
+-(Encore)
+
+-(GetPaid)
+
+-->YesItWorks

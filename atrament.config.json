@@ -1,13 +1,13 @@
 {
   "name": "Band Manager",
   "short_name": "Band_Manager",
-  "description": "Band Management Simulator - built with Atrament Preact UI",
+  "description": "Band Management Simulator - built with Inky for Atrament Preact UI",
   "theme": "light",
   "font": "System",
   "language": "en",
   "game": {
     "path": "game",
-    "source": "BM_Start.ink",
-    "script": "BM_Start.ink.json"
+    "source": "BandManager_start.ink",
+    "script": "BandManager_start.ink.json"
   }
 }

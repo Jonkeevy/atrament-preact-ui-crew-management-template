@@ -4,7 +4,7 @@
 # font: system
 # scenes_align: top
 # toolbar: game_toolbar
-
+# background: IMAGES/1920x1080.jpg
 // BAND MANAGER TEMPLATE
 // VERSION 00.1
 // CREATED by JON KEEVY....
@@ -55,7 +55,7 @@
 
 
 // ............ INCLUDED FILES ..............
-INCLUDE BandManager.ink
+INCLUDE BM_intro.ink
 INCLUDE BM_Functions.ink
 INCLUDE BM_Variables.ink
 INCLUDE BM_MoneyTravelTime.ink
@@ -75,7 +75,12 @@ VAR testNPC = ()
 === debugMenu
     <br>
     <br>
+
+    [bg]IMAGES/1920x1080.jpg[/bg]    
+    [img]IMAGES/1920x1080.jpg[/img]
+    in line
     <br>
+    #BACKGROUND: IMAGES/1920x1080.jpg
     <br>
     [banner style=accent]This game is under development.[/banner]
     <br>
