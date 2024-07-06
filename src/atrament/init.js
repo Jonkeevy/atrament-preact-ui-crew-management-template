@@ -2,7 +2,6 @@
 import { applicationID, gameFile, gamePath } from 'src/constants';
 
 import muteWhenInactive from 'src/utils/mute-when-inactive';
-import handleTagBackground from 'src/utils/tag-background';
 import { registerGetAssetPath } from 'src/utils/get-asset-path';
 
 import { loadDefaultFont, loadDefaultTheme } from 'src/atrament/load-defaults';
@@ -12,6 +11,7 @@ import registerSceneProcessors from 'src/atrament/scene-processors';
 import onGameStart from 'src/atrament/on-game-start';
 
 export default async function atramentInit(atrament, Story) {
+  console.log(import.meta.env);
   // show all events in console
   atrament.on('*', (event, message) => console.log(
     `%c Atrament > ${event} `, 'color: #111111; background-color: #7FDBFF;',
@@ -43,7 +43,5 @@ export default async function atramentInit(atrament, Story) {
   registerSceneProcessors(atrament);
   // mute when tab is inactive
   muteWhenInactive(atrament);
-  // handle #BACKGROUND tag
-  handleTagBackground(atrament);
   // done
 }
