@@ -8,6 +8,10 @@
 // [ ] Random Events
 
 
+=== function earnHEAT()
+    ~ return LIST_VALUE(bandsound) * LIST_VALUE(fanbase_state)
+
+
 === PlaytheGig
 - (Venue)
 #CLEAR
@@ -15,6 +19,8 @@ There's a venue called {venues(PlaytheGig)} you can play. You'll get a round of 
     + [Let's rock.]
     + {bandhas(negotiator)}[Negotiate THEN rock.]
         {whosskill(negotiator)} talks the manager of {venues(PlaytheGig)} round to throwing in an extra R{negotiate()} and another round of beers.
+
+{earnHEAT()}
 
 - (Performance)
 {
@@ -44,19 +50,41 @@ There's a venue called {venues(PlaytheGig)} you can play. You'll get a round of 
 
 === GigMiniGame
 -(SetTheScene)
-
+// [ ] 
+// [ ] 
+// [ ] 
 -(SoundCheck)
+// [ ] engineer
+// [ ] gearhead
 
 -(OpeningNumber)
+// [ ] songwriter
+// [ ] fronter
+
 
 -(RockOut)
+// [ ] 
+// [ ] Heckler vs brawler
 
 -(Solo)
+// [ ] virtuoso
+// [ ] 
 
 -(BigFinish)
+// [ ] firefly
+// [ ] songwriter
 
 -(Encore)
+// [ ] convert fans to die-hards
+// [ ] 
+
+-(GetHeat)
+// [ ] quality of performance x fans
+
 
 -(GetPaid)
+// [ ] number of fans x door - mishaps
+// [ ] merchmaker
+// [ ] negotiator
 
 -->YesItWorks

@@ -16,7 +16,26 @@ LIST towns = Nerensfontein, (Dopville), (Reksburg), (Qumbula), (Elizabethkop), (
 LIST venues = Pit, Crowbar, Fumbles, Blackety, Highballer, Spitoon, Skelms, Grinder, Anus, Arena, Coxwain, Trauma, Leftfield, Killager, BoneGarden // Better as an Alternative? 
 //LIST locations = van, garage, bar, loft, warehouse, hotel // Better as an Alternative?
 
-LIST fanbase_state = none, small, alright, cult, rabid, vast 
+LIST fanbase_state = (crickets), couple, dozen, cult, hundreds, thousands 
+// a couple of fans, dozens, hundreds, thousands
+
+=== function printFanbase()
+    Your audience is 
+    {LIST_VALUE(fanbase_state):
+        - 1:
+            <> {~a few alcoholic crickets|one old lady chainsmoking marlies and jerking off the one-armed-bandit}.
+        - 2:
+            <> a few teenage dirtbags
+        - 3:
+            dozen
+        - 4:
+            cult
+        - 5:
+            hundreds
+        - 6:
+            thousands
+    }
+
 
 LIST band_spirits = defeated, despairing, disappointed, down, fine, (optimistic), energised, psyched, godlike
 LIST bandsound = (bad), meh, OK, alright, tight, hardcore
@@ -27,7 +46,7 @@ LIST instruments = none, (lead_guitar), (drumkit), (bass), (synth), (saw), (keyb
 
 LIST conditions = busted, (fragile), (OK), (robust), (hardcore)
 
-LIST skills = (merchmaker), (gearhead), (mechanic), (negotiator), (songwriter), (fronter), (hustler), (looker), (grip), (engineer), (firefly), (brawler), (photographer), (activist)
+LIST skills = (merchmaker), (gearhead), (mechanic), (negotiator), (songwriter), (fronter), (hustler), (looker), (grip), (engineer), (firefly), (brawler), (photographer), (activist), (virtuoso)
 
 LIST vices = (sloppy), (aggro), (horny), (greedy), (unreliable), (apathetic), (sleepy), (clumsy), (dishonest), (impulsive), (selfish), (sus) 
 
@@ -58,7 +77,7 @@ CONST day_limit = 20
 VAR current_town = Nerensfontein
 VAR band_name = "Nameless"
 
-VAR fan_base = (fanbase_state.none)
+//VAR fan_base = (fanbase_state.none)
 VAR heat = 1.0
 VAR tour_fund = 1500
 VAR gig_income = 0

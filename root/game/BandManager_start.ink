@@ -4,7 +4,7 @@
 # font: system
 # scenes_align: top
 # toolbar: game_toolbar
-# background: IMAGES/1920x1080.jpg
+
 // BAND MANAGER TEMPLATE
 // VERSION 00.1
 // CREATED by JON KEEVY....
@@ -75,12 +75,12 @@ VAR testNPC = ()
 === debugMenu
     <br>
     <br>
-
+{printFanbase()}
     [bg]IMAGES/1920x1080.jpg[/bg]    
     [img]IMAGES/1920x1080.jpg[/img]
     in line
     <br>
-    #BACKGROUND: IMAGES/1920x1080.jpg
+    //#BACKGROUND: IMAGES/1080x1920.jpg
     <br>
     [banner style=accent]This game is under development.[/banner]
     <br>
