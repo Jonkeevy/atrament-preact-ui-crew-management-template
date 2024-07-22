@@ -18,7 +18,7 @@
 There's a venue called {venues(PlaytheGig)} you can play. You'll get a round of beers and the door money.
     + [Let's rock.]
     + {bandhas(negotiator)}[Negotiate THEN rock.]
-        {whosskill(negotiator)} talks the manager of {venues(PlaytheGig)} round to throwing in an extra R{negotiate()} and another round of beers.
+        {whosskill(negotiator)} talks the manager of {venues(PlaytheGig)} round to throwing in an extra {negotiate()} and another round of beers.
 
 {earnHEAT()}
 

@@ -143,17 +143,22 @@
 === function OddJob()
     ~ temp income = (odd_job_income * (LIST_COUNT(band ^ LIST_ALL(names)) + 1) + RANDOM(1,99))
     ~ tour_fund += income
-    ~ return income
+    {currency} {income}
 
 === function negotiate()
     ~ temp income = (odd_job_income * (LIST_COUNT(band ^ LIST_ALL(names)) + 1))
     ~ tour_fund += income
-    ~ return income
+    {currency} {income}
 
 === function PettyCrime()
     ~ temp income = (odd_job_income * (LIST_COUNT(band ^ LIST_ALL(names)) + 1) + RANDOM(100,500))
     ~ tour_fund += income
-    ~ return income
+    {currency} {income}
+
+=== function printNegotiateIncome(x)
+    {currency} {negotiate()}
+
+ 
     
 === check_Finished_Tour
     {

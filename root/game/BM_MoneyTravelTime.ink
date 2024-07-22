@@ -48,6 +48,8 @@
     {
     -checkSufficientFunds(costs):
         ~ return true
+    -else:
+        ~return false
     }  
 
 // .............. TRAVEL

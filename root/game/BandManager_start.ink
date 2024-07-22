@@ -75,9 +75,8 @@ VAR testNPC = ()
 === debugMenu
     <br>
     <br>
-{printFanbase()}
-    [bg]IMAGES/1920x1080.jpg[/bg]    
-    [img]IMAGES/1920x1080.jpg[/img]
+    //[bg]IMAGES/1920x1080.jpg[/bg]    
+    //[img]IMAGES/1920x1080.jpg[/img]
     in line
     <br>
     //#BACKGROUND: IMAGES/1080x1920.jpg
