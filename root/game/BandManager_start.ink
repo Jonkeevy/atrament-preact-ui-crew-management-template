@@ -51,6 +51,8 @@
 // [O] Show Hints Mode
 // [X] Sound effects stings
 // [X] Currency variable
+// [X] Dice Pool Roller
+// [ ] Dice with Mod Roller
 */
 
 
@@ -63,6 +65,7 @@ INCLUDE BM_Auditions.ink
 INCLUDE BM_PlayGig.ink
 INCLUDE BM_SFXsorter.ink
 INCLUDE BM_toolbar.ink
+INCLUDE BM_DiceFunc.ink
 
 // ............ DEBUG VARIABLES ............
 VAR DEBUG = false
@@ -71,13 +74,15 @@ VAR showHints = false
 VAR testNPC = ()
 
 // ............ START DIVERT ............
--> debugMenu
+-> testROLLER  
 === debugMenu
     <br>
+ 
     <br>
+   
     //[bg]IMAGES/1920x1080.jpg[/bg]    
     //[img]IMAGES/1920x1080.jpg[/img]
-    in line
+
     <br>
     //#BACKGROUND: IMAGES/1080x1920.jpg
     <br>
