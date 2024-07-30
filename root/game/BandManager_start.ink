@@ -66,6 +66,7 @@ INCLUDE BM_PlayGig.ink
 INCLUDE BM_SFXsorter.ink
 INCLUDE BM_toolbar.ink
 INCLUDE BM_DiceFunc.ink
+INCLUDE BM_CountFuncs.ink
 
 // ............ DEBUG VARIABLES ............
 VAR DEBUG = false

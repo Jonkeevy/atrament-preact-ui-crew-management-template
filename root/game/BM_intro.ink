@@ -125,7 +125,7 @@ How do you want to spend your time?
     -> Rehearse ->
 + {action_points >= 1}[Relax]
     ~ action_points --
-    You relax and your spirits are now {improve(band_spirits)}. Which is better than they were before.
+    You relax and your spirits are now {improveLIST(band_spirits)}. Which is better than they were before.
 + {action_points >= 1}[Promote]
     ~ action_points --
     ~ alter(promo_boost,1)
@@ -144,7 +144,7 @@ How do you want to spend your time?
 
 === Rehearse
 #CLEAR
-{band_name} get together and jam for a couple of hours. By the end you sound {improve(bandsound)}. 
+{band_name} get together and jam for a couple of hours. By the end you sound {improveLIST(bandsound)}. 
 ->->
 
 
@@ -159,7 +159,7 @@ That's the end of the day. Where will you sleep?
     ~ payEach(100)
 + {afford_payEach(500)}A hotel[, {currency}500 each.] is expensive. But you deserve a good night sleep. 
     ~ payEach(500)
-    ~ improve(band_spirits)
+    ~ improveLIST(band_spirits)
 -
 -> NewDay
 

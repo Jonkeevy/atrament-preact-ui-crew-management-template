@@ -24,7 +24,7 @@
 === function filter(var, type)
     ~ return var ^ LIST_ALL(type)
 
-=== function improve(ref list)
+=== function improveLIST(ref list)
     {
     -list != LIST_MAX(LIST_ALL(list)):
         ~ list ++
