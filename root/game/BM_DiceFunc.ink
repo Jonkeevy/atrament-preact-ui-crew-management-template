@@ -4,25 +4,38 @@
 // Z is always SUCCESS THRESHOLD / DC
 // M is always MODIFIER
 
-//-> testROLLER
+// TOTAL is a single INT value
+// SHOW_ROLLS is a STRING with the value of the individual rolls shown
+// TALLY is a STRING with ROLLS and TOTAL
+// PRINT is to put the ROLL/TALLY/TOTAL into a sentence.
+
+
+-> testROLLER
 === testROLLER
-Roll 1 dice with Y sides = {roll1dY(10)}
-Roll X dice with Y sides = {roll1dY(10)}
-Total Roll X dice with Y sides = {totalrollXdY(3,10)} 
-Print Roll X dice with Y sides = {printrollXdY(3,10)} <br>
-Tally Roll (print all rolls with a final tally) = {tallyrollXdY(3, 10)}
-Total Roll (print only the final total) = {totalrollXdY(3,10)}
+[img]IAGES/totoro.gif[/img]
 
-Roll 1 dice with Y sides and M modifier = {roll1dYwMod(10,5)}
+{showrollXd6(3)}
+and
+{rollXd6succeedonZ(6 ,6)}
 
-Tally Roll X dice with Y sides and M modifier (print all rolls with a final total) = {tallyrollXdYwMod(3,10,5)}
-Total Roll X dice with Y sides and M modifier (print only the final total) = {totalrollXdYwMod(3,10,5)}
+{rollXd6succeedonZ(2,6)}
 
-Check if 1 of X dice with Y sides and M modifiers is equal to or greater than Z: 
+Total Roll 1 dice with Y sides = {roll1dY(10)}
+Total Roll X dice with Y sides = {totalrollXdY(3,10)}
+Show Roll X dice with Y sides = {showrollXdY(3,10)} <br>
+Tally Roll X dice with Y sides (show all rolls with a final total as string) = {tallyrollXdY(3, 10)}
 
-{rollXdYwModsucceedonZ(3,10,10,5)}
 
-{printSUCCESScountwMod(9,10,6,4)}
+Total Roll 1 dice with Y sides and M modifier = {roll1dYwMod(10,5)}
+
+Tally Roll X dice with Y sides and M modifier = {tallyrollXdYwMod(3,10,5)}
+Total Roll X dice with Y sides and M modifier = {totalrollXdYwMod(3,10,5)}
+
+Show Roll & Check if at least 1 of X dice with Y sides and M modifiers is equal to or greater than Z: 
+... <>{rollXdYwModsucceedonZ(3,10,10,5)}
+
+Check & Print how many of X dice with Y sides and M modifiers is equal to or greater than Z: 
+... <>{showSUCCESScountwMod(9,10,6,4)}
 
 ->DONE
 
@@ -51,13 +64,46 @@ Check if 1 of X dice with Y sides and M modifiers is equal to or greater than Z:
      ~ succeedonZ(y,z+1,var)   
     }  
 
+// <<<<<<<<<<<<<< D6 POOL IMAGE ROLLER >>>>>>>>>>>>>>
+
+=== function showrollXd6(x)
+    { x > 0:
+        ~ temp roll1 = roll1dY(6)
+        ~ printD6image( roll1 )
+        ~ showrollXd6(x-1)
+    -else:
+        
+        ~return
+    }
+
+=== function printD6image(x)
+{ x:
+- 1:     [img]IMAGES/D6_ONE.png[/img] <>
+- 2:     [img]IMAGES/D6_TWO.png[/img] <>
+- 3:     [img]IMAGES/D6_THREE.png[/img] <>
+- 4:     [img]IMAGES/D6_FOUR.png[/img] <>
+- 5:     [img]IMAGES/D6_FIVE.png[/img] <>
+- 6:     [img]IMAGES/D6_SIX.png[/img] <>
+- else:  not a d6.
+}
+
+=== function rollXd6succeedonZ(x ,z)
+    {z > 6:
+        ~ return "This roll is impossible."
+    }
+    
+    ~ temp roll = "{showrollXd6(x)}"
+    
+    You rolled<br> {roll}<br> which means you {rollSUCCEEDorFAIL(6, z,roll)}
+
+
 // <<<<<<<<<<<<<< DICE POOL ROLLER >>>>>>>>>>>>>>
 
-=== function printrollXdY(x, y)
+=== function showrollXdY(x, y)
     { x > 0:
         ~ temp roll1 = roll1dY(y)
         {roll1} <>
-        ~ printrollXdY(x-1,y)
+        ~ showrollXdY(x-1,y)
     }
 
 
@@ -66,7 +112,7 @@ Check if 1 of X dice with Y sides and M modifiers is equal to or greater than Z:
         ~ return "This roll is impossible."
     }
     
-    ~ temp roll = "{printrollXdY(x,y)}"
+    ~ temp roll = "{showrollXdY(x,y)}"
     
     You rolled {roll} which means you {rollSUCCEEDorFAIL(y, z,roll)}
 
@@ -100,11 +146,11 @@ Check if 1 of X dice with Y sides and M modifiers is equal to or greater than Z:
     ~ temp roll = roll1dY(y) + m
     ~ return roll
 
-=== function printrollXdYwMod(x, y,m)
+=== function showrollXdYwMod(x, y,m)
     { x > 0:
         ~ temp roll1 = roll1dY(y) + m
         {roll1} <>
-        ~ printrollXdYwMod(x-1,y,m)
+        ~ showrollXdYwMod(x-1,y,m)
     }
 
 === function totalrollXdYwMod(x, y,m)
@@ -131,7 +177,7 @@ Check if 1 of X dice with Y sides and M modifiers is equal to or greater than Z:
         ~ return "This roll is impossible."
     }
     
-    ~ temp roll = "{printrollXdYwMod(x,y,m)}"
+    ~ temp roll = "{showrollXdYwMod(x,y,m)}"
     
     You rolled {roll} which means you {rollSUCCEEDorFAIL(y, z - m,roll)}
 
@@ -162,6 +208,6 @@ Check if 1 of X dice with Y sides and M modifiers is equal to or greater than Z:
 === function countSUCCESSwMod(x,y,z,m)
     ~ return countSUCCESS(x,y,z-m)    
     
-=== function printSUCCESScountwMod(x,y,z,m)
+=== function showSUCCESScountwMod(x,y,z,m)
 You rolled {x} D{y} with a {m} modifier and got {countSUCCESSwMod(x,y,z,m)} successes against a DC of {z}.
     

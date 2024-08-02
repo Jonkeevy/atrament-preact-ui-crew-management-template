@@ -8,7 +8,7 @@ VAR trout = (J, blue, affordable)
 VAR carp = (J, red, cheap)
 VAR sardine = (J, silver, expensive)
 
--> catchFish
+//-> catchFish
 
 === catchFish
 You have:

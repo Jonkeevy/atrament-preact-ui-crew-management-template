@@ -75,14 +75,14 @@ VAR showHints = false
 VAR testNPC = ()
 
 // ............ START DIVERT ............
--> testROLLER  
+-> debugMenu  
 === debugMenu
     <br>
  
     <br>
    
     //[bg]IMAGES/1920x1080.jpg[/bg]    
-    //[img]IMAGES/1920x1080.jpg[/img]
+    [img]IMAGES/D6_ONE.png[/img]
 
     <br>
     //#BACKGROUND: IMAGES/1080x1920.jpg
