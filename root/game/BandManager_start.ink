@@ -52,7 +52,8 @@
 // [X] Sound effects stings
 // [X] Currency variable
 // [X] Dice Pool Roller
-// [ ] Dice with Mod Roller
+// [X] Dice with Mod Roller
+// [X] D6 with img
 */
 
 
@@ -82,7 +83,7 @@ VAR testNPC = ()
     <br>
    
     //[bg]IMAGES/1920x1080.jpg[/bg]    
-    [img]IMAGES/D6_ONE.png[/img]
+    //[img]IMAGES/D6_ONE.png[/img]
 
     <br>
     //#BACKGROUND: IMAGES/1080x1920.jpg

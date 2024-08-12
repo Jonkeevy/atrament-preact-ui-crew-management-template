@@ -12,15 +12,16 @@
 
 -> testROLLER
 === testROLLER
-[img]IAGES/totoro.gif[/img]
+[info font=Merriweather]Text below is a spoiler. Click on it to reveal.[/info]
 
-{showrollXd6(3)}
-and
+//[img]IAGES/totoro.gif[/img]
+ {showrollXd6(3)}
+<mark style="background-color: rgba(217, 81, 233, 0.2)">and</mark>
 {rollXd6succeedonZ(6 ,6)}
 
 {rollXd6succeedonZ(2,6)}
 
-Total Roll 1 dice with Y sides = {roll1dY(10)}
+[info]Total Roll 1 dice with Y sides = {roll1dY(10)}[/info]
 Total Roll X dice with Y sides = {totalrollXdY(3,10)}
 Show Roll X dice with Y sides = {showrollXdY(3,10)} <br>
 Tally Roll X dice with Y sides (show all rolls with a final total as string) = {tallyrollXdY(3, 10)}
