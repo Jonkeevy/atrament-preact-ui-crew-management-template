@@ -11,7 +11,6 @@ import Highlight from './highlight';
 
 export default [
   Button,
-  InlineImage,
   InlineLink,
   Progress,
   Input,
@@ -19,5 +18,6 @@ export default [
   Info,
   Banner,
   Font,
-  Highlight
+  Highlight,
+  InlineImage
 ];

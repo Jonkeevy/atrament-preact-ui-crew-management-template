@@ -1,5 +1,5 @@
 {
-  "name": "Atrament Web UI demo",
+  "name": "Atrament Web UI demo - Band Manager beta",
   "short_name": "atrament-web-ui",
   "description": "Atrament Web UI - shell for Ink games",
   "theme": "light",
@@ -7,6 +7,6 @@
   "language": "en",
   "game": {
     "path": "game",
-    "source": "intercept.ink"
+    "source": "BandManager_start.ink"
   }
 }
