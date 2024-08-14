@@ -12,12 +12,11 @@
 
 -> testROLLER
 === testROLLER
-[info font=Merriweather]Text below is a spoiler. Click on it to reveal.[/info]
+[info]{showrollXd6(3)}[/info]
 
-//[img]IAGES/totoro.gif[/img]
- {showrollXd6(3)}
-<mark style="background-color: rgba(217, 81, 233, 0.2)">and</mark>
-{rollXd6succeedonZ(6 ,6)}
+{showrollXd6(3)}
+
+[info]{rollXd6succeedonZ(6 ,6)}[/info]
 
 {rollXd6succeedonZ(2,6)}
 
@@ -95,7 +94,7 @@ Check & Print how many of X dice with Y sides and M modifiers is equal to or gre
     
     ~ temp roll = "{showrollXd6(x)}"
     
-    You rolled<br> {roll}<br> which means you {rollSUCCEEDorFAIL(6, z,roll)}
+    <>You rolled<br>[info] {roll}[/info] which means you {rollSUCCEEDorFAIL(6, z,roll)}
 
 
 // <<<<<<<<<<<<<< DICE POOL ROLLER >>>>>>>>>>>>>>

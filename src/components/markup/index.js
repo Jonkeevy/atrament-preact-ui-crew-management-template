@@ -9,11 +9,11 @@ import Banner from './banner';
 
 export default [
   Button,
-  InlineImage,
   InlineLink,
   Progress,
   Input,
   Spoiler,
   Info,
-  Banner
+  Banner,
+  InlineImage
 ];
