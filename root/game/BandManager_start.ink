@@ -22,7 +22,20 @@
     NPCs can be moved to new locations, or gathered for special scenes.
     Most conversations assume the Player is speaking with one NPC, but adding a companion won't take too much tweaking.
  
-// >>>>>>>>>>>>>> TO DO <<<<<<<<<<<<<<<<<
+// >>>>>>>>>>>>>> DOWN-SCOPED TO DO <<<<<<<<<<<
+// [ ] Preserve work - spin off systems for Itch
+// [ ] Three Phases
+//      [ ] Travel
+//      [ ] Action
+//      [ ] Gig
+// [ ] Limited Deck of Event Cards for each phase - 3 of each = 9 (small start) (Making it easy to expand if fun)
+// [ ] Dice Pool Mechanic
+// [ ] Reduce the economy systems to dice challenges
+// [ ] Cute Janky Zine-ish illustration / art
+// [ ] Dope sound cues.
+
+
+// >>>>>>>>>>>>>> OLD TO DO <<<<<<<<<<<<<<<<<
 // [X] Travel and fuel consumption calculator
 // [X] Town tracker
 // [X] Gig income generator

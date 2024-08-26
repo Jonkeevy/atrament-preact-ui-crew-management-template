@@ -99,9 +99,9 @@ Your drive is {band_spirits}.
 #CLEAR
 ~ generateNPC(auditioner) // create an NPC with random traits pulled from a list.
 One person has shown up to audition for {band_name}.
-
-Their name is <mark>{name(auditioner)}</mark> and they play a <mark>{instrument(auditioner)}</mark> that looks <mark>{condition(auditioner)}</mark>. As a bonus they're a <mark>{skill(auditioner)}</mark> but they seem <mark>{vice(auditioner)}</mark>.
 ~ sfx_instrument_riff(auditioner)
+Their name is <mark>{name(auditioner)}</mark> and they play a <mark>{instrument(auditioner)}</mark> that looks <mark>{condition(auditioner)}</mark>. As a bonus they're a <mark>{skill(auditioner)}</mark> but they seem <mark>{vice(auditioner)}</mark>.
+
 <br>
 {Auditions<=1: // Only show block on first visit to the knot.
 <br>

@@ -1,7 +1,6 @@
 
 // LIST instruments = none, (lead_guitar), (drumkit), (bass), (synth), (saw), (keyboard), (violin), (bassoon), (ax), (rhythm_guitar)
 
-
 === function sfx_instrument_riff(x)
 {
 - rhythm_guitar ^ x:
